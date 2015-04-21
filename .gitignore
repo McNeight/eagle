@@ -34,3 +34,14 @@ eagle.epf
 *.info
 
 *.eps
+
+# Directories from other sources
+Adafruit/
+Adafruit-Eagle-Library/
+Arduino/
+DP_Eagle_Part_Library/
+SparkFun/
+SparkFun_Eagle_Settings/
+SparkFun-Eagle-Libraries/
+Sick_of_Beige/
+
