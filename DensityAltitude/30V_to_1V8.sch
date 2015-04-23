@@ -9,6 +9,20 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
@@ -9599,26 +9613,61 @@ Production Part - 8199
 </deviceset>
 </devicesets>
 </library>
-<library name="inductors">
-<description>&lt;b&gt;Inductors and Filters&lt;/b&gt;&lt;p&gt;
-Based on the previous library ind-a.lbr&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<library name="1V8">
 <packages>
+<package name="KEMET_E">
+<wire x1="6.35" y1="3.556" x2="-5.08" y2="3.556" width="0.1524" layer="21"/>
+<wire x1="6.731" y1="3.175" x2="6.731" y2="-3.175" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="-3.556" x2="6.35" y2="-3.556" width="0.1524" layer="21"/>
+<wire x1="-6.731" y1="1.905" x2="-5.08" y2="3.556" width="0.1524" layer="21"/>
+<wire x1="-4.318" y1="1.6764" x2="-4.318" y2="1.0414" width="0.1524" layer="21"/>
+<wire x1="-3.9878" y1="1.3716" x2="-4.6482" y2="1.3716" width="0.1524" layer="21"/>
+<wire x1="-3.683" y1="0" x2="-0.762" y2="0" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="0" x2="-0.762" y2="-1.2192" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="-1.2192" x2="-0.254" y2="-1.2192" width="0.1524" layer="21"/>
+<wire x1="-0.254" y1="-1.2192" x2="-0.254" y2="1.2192" width="0.1524" layer="21"/>
+<wire x1="-0.254" y1="1.2192" x2="-0.762" y2="1.2192" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="1.2192" x2="-0.762" y2="0" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="0" x2="3.556" y2="0" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="-3.556" x2="-6.731" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-6.731" y1="1.905" x2="-6.731" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="6.35" y1="3.556" x2="6.731" y2="3.175" width="0.1524" layer="21" curve="-90"/>
+<wire x1="6.35" y1="-3.556" x2="6.731" y2="-3.175" width="0.1524" layer="21" curve="90"/>
+<pad name="+" x="-8.89" y="0" drill="0.9144"/>
+<pad name="-" x="8.89" y="0" drill="0.9144" shape="octagon"/>
+<text x="0" y="4.445" size="0.762" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-4.445" size="0.762" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<rectangle x1="0.254" y1="-1.27" x2="0.762" y2="1.27" layer="21"/>
+</package>
+<package name="CPOL-RADIAL-10UF-25V-KIT">
+<circle x="0" y="0" radius="2.5" width="0.2032" layer="21"/>
+<pad name="1" x="1.27" y="0" drill="0.7" diameter="1.651" shape="square" stop="no"/>
+<pad name="2" x="-1.27" y="0" drill="0.7" diameter="1.651" stop="no"/>
+<text x="-0.889" y="1.524" size="0.4064" layer="25">&gt;Name</text>
+<text x="-1.905" y="-3.683" size="0.8128" layer="27">&gt;Value</text>
+<circle x="-1.27" y="0" radius="0.3556" width="0" layer="29"/>
+<circle x="-1.27" y="0" radius="0.9652" width="0" layer="30"/>
+<circle x="1.27" y="0" radius="0.3556" width="0" layer="29"/>
+<rectangle x1="0.3048" y1="-0.9652" x2="2.2352" y2="0.9652" layer="30"/>
+<wire x1="-0.762" y1="1.397" x2="-1.778" y2="1.397" width="0.2032" layer="21"/>
+<wire x1="1.778" y1="1.397" x2="0.762" y2="1.397" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="1.905" x2="1.27" y2="0.889" width="0.2032" layer="21"/>
+</package>
 <package name="BNX002">
 <description>&lt;b&gt;FILTER&lt;/b&gt;&lt;p&gt;
 manufacturer Murata</description>
-<wire x1="-6.096" y1="5.588" x2="6.096" y2="5.588" width="0.1524" layer="21"/>
-<wire x1="6.096" y1="-5.588" x2="-6.096" y2="-5.588" width="0.1524" layer="21"/>
-<wire x1="6.096" y1="-5.588" x2="6.096" y2="-0.889" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="-0.254" x2="6.096" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="-6" y1="5.5" x2="6" y2="5.5" width="0.1524" layer="21"/>
+<wire x1="6" y1="-5.5" x2="-6" y2="-5.5" width="0.1524" layer="21"/>
+<wire x1="6" y1="-5.5" x2="6" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="-0.254" x2="6" y2="-0.254" width="0.1524" layer="51"/>
 <wire x1="3.81" y1="-0.254" x2="3.81" y2="0.254" width="0.1524" layer="51"/>
-<wire x1="6.096" y1="0.254" x2="3.81" y2="0.254" width="0.1524" layer="51"/>
-<wire x1="6.096" y1="0.889" x2="6.096" y2="5.588" width="0.1524" layer="21"/>
-<wire x1="-6.096" y1="5.588" x2="-6.096" y2="0.254" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="0.254" x2="-6.096" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="6" y1="0.254" x2="3.81" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="6" y1="0.254" x2="6" y2="5.5" width="0.1524" layer="21"/>
+<wire x1="-6" y1="5.5" x2="-6" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="0.254" x2="-6" y2="0.254" width="0.1524" layer="21"/>
 <wire x1="-3.81" y1="0.254" x2="-3.81" y2="-0.254" width="0.1524" layer="21"/>
-<wire x1="-6.096" y1="-0.254" x2="-3.81" y2="-0.254" width="0.1524" layer="21"/>
-<wire x1="-6.096" y1="-0.254" x2="-6.096" y2="-5.588" width="0.1524" layer="21"/>
+<wire x1="-6" y1="-0.254" x2="-3.81" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="-6" y1="-0.254" x2="-6" y2="-5.5" width="0.1524" layer="21"/>
 <wire x1="-3.302" y1="2.54" x2="-3.302" y2="-2.54" width="0.1524" layer="51"/>
 <wire x1="3.302" y1="-2.54" x2="2.286" y2="-2.54" width="0.1524" layer="51"/>
 <wire x1="3.302" y1="-2.54" x2="3.302" y2="2.54" width="0.1524" layer="51"/>
@@ -9633,22 +9682,32 @@ manufacturer Murata</description>
 <wire x1="-2.54" y1="0.635" x2="-0.635" y2="2.54" width="0.1524" layer="51" curve="-270"/>
 <wire x1="-2.54" y1="-0.635" x2="-0.635" y2="-2.54" width="0.1524" layer="51" curve="270"/>
 <wire x1="0.635" y1="-2.54" x2="2.54" y2="-0.635" width="0.1524" layer="51" curve="270"/>
-<wire x1="6.096" y1="-0.254" x2="6.096" y2="-0.889" width="0.1524" layer="51"/>
-<wire x1="6.096" y1="0.889" x2="6.096" y2="0.254" width="0.1524" layer="51"/>
-<pad name="CG" x="-2.54" y="-2.54" drill="1.1938" shape="octagon"/>
-<pad name="CB" x="2.54" y="-2.54" drill="1.1938" shape="octagon"/>
-<pad name="B" x="2.54" y="2.54" drill="1.1938" shape="octagon"/>
-<pad name="PSG" x="-2.54" y="2.54" drill="1.1938" shape="octagon"/>
-<pad name="CG1" x="0" y="0" drill="1.1938" shape="octagon"/>
-<pad name="CG2" x="5.08" y="0" drill="1.1938" shape="octagon"/>
-<text x="-6.096" y="6.096" size="1.778" layer="25" ratio="10">&gt;NAME</text>
-<text x="-6.096" y="-7.874" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
+<pad name="CG" x="-2.5" y="-2.5" drill="1"/>
+<pad name="CB" x="2.5" y="-2.5" drill="1"/>
+<pad name="B" x="2.5" y="2.5" drill="1"/>
+<pad name="PSG" x="-2.5" y="2.5" drill="1"/>
+<pad name="CG1" x="0" y="0" drill="1"/>
+<pad name="CG2" x="5" y="0" drill="1"/>
+<text x="0" y="6.096" size="0.762" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-6.096" size="0.762" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
 <text x="4.445" y="3.81" size="1.27" layer="51" ratio="10">B</text>
 <rectangle x1="2.286" y1="-2.54" x2="3.302" y2="2.54" layer="51"/>
 <rectangle x1="-3.302" y1="-2.54" x2="-2.286" y2="2.54" layer="51"/>
 </package>
 </packages>
 <symbols>
+<symbol name="CAP_POL">
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.016" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1" x2="2.4892" y2="-1.8542" width="0.254" layer="94" curve="-37.878202" cap="flat"/>
+<wire x1="-2.4669" y1="-1.8504" x2="0" y2="-1.0161" width="0.254" layer="94" curve="-37.376341" cap="flat"/>
+<text x="1.016" y="0.635" size="1.778" layer="95">&gt;NAME</text>
+<text x="1.016" y="-4.191" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-2.253" y1="0.668" x2="-1.364" y2="0.795" layer="94"/>
+<rectangle x1="-1.872" y1="0.287" x2="-1.745" y2="1.176" layer="94"/>
+<pin name="+" x="0" y="2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="-" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+</symbol>
 <symbol name="BNX">
 <wire x1="-10.16" y1="3.556" x2="-5.08" y2="3.556" width="0.254" layer="94"/>
 <wire x1="0" y1="3.556" x2="5.08" y2="3.556" width="0.254" layer="94"/>
@@ -9712,9 +9771,9 @@ manufacturer Murata</description>
 <circle x="-2.54" y="-5.08" radius="0.254" width="0.4064" layer="94"/>
 <circle x="-2.54" y="5.08" radius="0.254" width="0.4064" layer="94"/>
 <circle x="8.89" y="-5.08" radius="0.254" width="0.4064" layer="94"/>
-<text x="-12.065" y="8.255" size="1.778" layer="95">&gt;NAME</text>
-<text x="-12.065" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
-<text x="5.08" y="-4.445" size="1.524" layer="94">CG</text>
+<text x="0" y="8.382" size="1.778" layer="95" font="vector" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-8.382" size="1.778" layer="96" font="vector" align="top-center">&gt;VALUE</text>
+<text x="5.08" y="-4.445" size="1.524" layer="94" font="vector">CG</text>
 <rectangle x1="-10.16" y1="-5.969" x2="-5.08" y2="-4.191" layer="94"/>
 <rectangle x1="-10.16" y1="4.191" x2="-5.08" y2="5.969" layer="94"/>
 <rectangle x1="0" y1="4.191" x2="5.08" y2="5.969" layer="94"/>
@@ -9722,9 +9781,38 @@ manufacturer Murata</description>
 <pin name="B" x="-15.24" y="5.08" visible="pad" length="middle" direction="pas"/>
 <pin name="CG" x="15.24" y="-5.08" visible="pad" direction="pas" rot="R180"/>
 <pin name="PSG" x="-15.24" y="-5.08" visible="pad" length="middle" direction="pas"/>
+<text x="-10.16" y="1.397" size="1.524" layer="94" font="vector">B</text>
 </symbol>
 </symbols>
 <devicesets>
+<deviceset name="10UF-50V-10%(PTH)" prefix="C" uservalue="yes">
+<description>CAP-08440</description>
+<gates>
+<gate name="G$1" symbol="CAP_POL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="KIT" package="CPOL-RADIAL-10UF-25V-KIT">
+<connects>
+<connect gate="G$1" pin="+" pad="1"/>
+<connect gate="G$1" pin="-" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-08440" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="" package="KEMET_E">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 <deviceset name="BNX002" prefix="L">
 <description>&lt;b&gt;FILTER&lt;/b&gt;</description>
 <gates>
@@ -9735,7 +9823,7 @@ manufacturer Murata</description>
 <connects>
 <connect gate="1" pin="B" pad="B"/>
 <connect gate="1" pin="CB" pad="CB"/>
-<connect gate="1" pin="CG" pad="CG"/>
+<connect gate="1" pin="CG" pad="CG CG1 CG2"/>
 <connect gate="1" pin="PSG" pad="PSG"/>
 </connects>
 <technologies>
@@ -9757,25 +9845,25 @@ manufacturer Murata</description>
 </classes>
 <parts>
 <part name="U1" library="DensityAltitude" deviceset="V_REG_LD1086" device="V" value="V_REG_LD1086V"/>
-<part name="C1" library="rcl" deviceset="CPOL-US" device="E2-5" value="10uF"/>
-<part name="C2" library="rcl" deviceset="CPOL-US" device="E2-5" value="10uF"/>
-<part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="C1" library="1V8" deviceset="10UF-50V-10%(PTH)" device="" value="10uF"/>
+<part name="C2" library="1V8" deviceset="10UF-50V-10%(PTH)" device="" value="10uF"/>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="F2" library="DensityAltitude" deviceset="PTC" device="PTH"/>
 <part name="F1" library="DensityAltitude" deviceset="FUSE5" device="X20MM"/>
 <part name="JP1" library="DensityAltitude" deviceset="M02" device="TE-282834-2"/>
 <part name="JP2" library="DensityAltitude" deviceset="M02" device="TE-282834-2"/>
-<part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="LED1" library="SparkFun-LED" deviceset="LED" device="5MM"/>
 <part name="D2" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="PTH"/>
 <part name="D1" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="PTH"/>
-<part name="L1" library="inductors" deviceset="BNX002" device=""/>
-<part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="L1" library="1V8" deviceset="BNX002" device=""/>
 <part name="D3" library="SparkFun-DiscreteSemi" deviceset="DIODE-ZENER" device="PTH"/>
 <part name="L2" library="DensityAltitude" deviceset="2121-RC-VERT" device=""/>
 <part name="C3" library="rcl" deviceset="CPOL-US" device="E10-30"/>
+<part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND-ISO1" library="SparkFun-Aesthetics" deviceset="GND-ISO" device=""/>
+<part name="GND-ISO2" library="SparkFun-Aesthetics" deviceset="GND-ISO" device=""/>
+<part name="GND-ISO3" library="SparkFun-Aesthetics" deviceset="GND-ISO" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9785,63 +9873,38 @@ manufacturer Murata</description>
 <instance part="U1" gate="G$1" x="45.72" y="30.48"/>
 <instance part="C1" gate="G$1" x="30.48" y="25.4"/>
 <instance part="C2" gate="G$1" x="60.96" y="25.4"/>
-<instance part="GND1" gate="1" x="45.72" y="2.54"/>
 <instance part="SUPPLY1" gate="G$1" x="17.78" y="83.82"/>
 <instance part="SUPPLY2" gate="G$1" x="96.52" y="33.02"/>
-<instance part="F2" gate="G$1" x="73.66" y="78.74"/>
+<instance part="F2" gate="G$1" x="58.42" y="78.74"/>
 <instance part="F1" gate="G$1" x="33.02" y="78.74"/>
 <instance part="JP1" gate="G$1" x="5.08" y="76.2"/>
 <instance part="JP2" gate="G$1" x="109.22" y="27.94" rot="MR0"/>
-<instance part="GND2" gate="1" x="96.52" y="20.32"/>
 <instance part="LED1" gate="G$1" x="76.2" y="25.4"/>
 <instance part="D2" gate="G$1" x="45.72" y="40.64" rot="R180"/>
-<instance part="D1" gate="G$1" x="55.88" y="78.74"/>
+<instance part="D1" gate="G$1" x="78.74" y="78.74"/>
 <instance part="L1" gate="1" x="106.68" y="73.66"/>
-<instance part="GND4" gate="1" x="137.16" y="58.42"/>
 <instance part="D3" gate="G$1" x="152.4" y="73.66" rot="R90"/>
 <instance part="L2" gate="G$1" x="137.16" y="81.28" rot="R90"/>
 <instance part="C3" gate="G$1" x="165.1" y="73.66"/>
-<instance part="GND-ISO1" gate="G$1" x="50.8" y="58.42"/>
+<instance part="GND3" gate="1" x="53.34" y="58.42"/>
+<instance part="GND-ISO1" gate="G$1" x="147.32" y="58.42"/>
+<instance part="GND-ISO2" gate="G$1" x="96.52" y="20.32"/>
+<instance part="GND-ISO3" gate="G$1" x="45.72" y="2.54"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="GND" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="GND"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="45.72" y1="22.86" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="C2" gate="G$1" pin="-"/>
-<wire x1="45.72" y1="15.24" x2="45.72" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="20.32" x2="60.96" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="15.24" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
-<junction x="45.72" y="15.24"/>
-<pinref part="C1" gate="G$1" pin="-"/>
-<wire x1="30.48" y1="20.32" x2="30.48" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="15.24" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="LED1" gate="G$1" pin="C"/>
-<wire x1="76.2" y1="20.32" x2="76.2" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="15.24" x2="60.96" y2="15.24" width="0.1524" layer="91"/>
-<junction x="60.96" y="15.24"/>
-</segment>
-<segment>
-<pinref part="JP2" gate="G$1" pin="1"/>
-<pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="101.6" y1="27.94" x2="96.52" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="27.94" x2="96.52" y2="22.86" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="L1" gate="1" pin="CG"/>
-<pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="121.92" y1="68.58" x2="137.16" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="-"/>
-<wire x1="137.16" y1="68.58" x2="137.16" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="D3" gate="G$1" pin="A"/>
-<wire x1="165.1" y1="68.58" x2="152.4" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="68.58" x2="152.4" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="68.58" x2="137.16" y2="68.58" width="0.1524" layer="91"/>
-<junction x="152.4" y="68.58"/>
-<junction x="137.16" y="68.58"/>
+<pinref part="JP1" gate="G$1" pin="1"/>
+<wire x1="12.7" y1="76.2" x2="17.78" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="76.2" x2="17.78" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="L1" gate="1" pin="PSG"/>
+<wire x1="17.78" y1="68.58" x2="53.34" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="53.34" y1="68.58" x2="91.44" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="60.96" x2="53.34" y2="68.58" width="0.1524" layer="91"/>
+<junction x="53.34" y="68.58"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -9870,9 +9933,9 @@ manufacturer Murata</description>
 </net>
 <net name="FUSE2" class="0">
 <segment>
+<pinref part="D1" gate="G$1" pin="A"/>
 <pinref part="F2" gate="G$1" pin="2"/>
-<pinref part="L1" gate="1" pin="B"/>
-<wire x1="91.44" y1="78.74" x2="81.28" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="78.74" x2="76.2" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VIN" class="0">
@@ -9884,29 +9947,6 @@ manufacturer Murata</description>
 <pinref part="JP1" gate="G$1" pin="2"/>
 <wire x1="12.7" y1="78.74" x2="17.78" y2="78.74" width="0.1524" layer="91"/>
 <junction x="17.78" y="78.74"/>
-</segment>
-</net>
-<net name="FUSE1" class="0">
-<segment>
-<pinref part="F1" gate="G$1" pin="2"/>
-<pinref part="D1" gate="G$1" pin="A"/>
-<wire x1="53.34" y1="78.74" x2="43.18" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="DIODE1" class="0">
-<segment>
-<pinref part="F2" gate="G$1" pin="1"/>
-<pinref part="D1" gate="G$1" pin="C"/>
-<wire x1="58.42" y1="78.74" x2="68.58" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="JP1" gate="G$1" pin="1"/>
-<wire x1="12.7" y1="76.2" x2="17.78" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="76.2" x2="17.78" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="L1" gate="1" pin="PSG"/>
-<wire x1="17.78" y1="68.58" x2="91.44" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -9939,6 +9979,58 @@ manufacturer Murata</description>
 <wire x1="35.56" y1="40.64" x2="35.56" y2="30.48" width="0.1524" layer="91"/>
 <junction x="35.56" y="30.48"/>
 <label x="30.48" y="30.48" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="FUSE1" class="0">
+<segment>
+<pinref part="F1" gate="G$1" pin="2"/>
+<pinref part="F2" gate="G$1" pin="1"/>
+<wire x1="53.34" y1="78.74" x2="43.18" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="GND-ISO" class="0">
+<segment>
+<pinref part="L1" gate="1" pin="CG"/>
+<wire x1="121.92" y1="68.58" x2="147.32" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="-"/>
+<wire x1="147.32" y1="68.58" x2="147.32" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="D3" gate="G$1" pin="A"/>
+<wire x1="165.1" y1="68.58" x2="152.4" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="68.58" x2="152.4" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="68.58" x2="147.32" y2="68.58" width="0.1524" layer="91"/>
+<junction x="152.4" y="68.58"/>
+<junction x="147.32" y="68.58"/>
+<pinref part="GND-ISO1" gate="G$1" pin="GND-ISO"/>
+</segment>
+<segment>
+<pinref part="JP2" gate="G$1" pin="1"/>
+<wire x1="101.6" y1="27.94" x2="96.52" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="27.94" x2="96.52" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="GND-ISO2" gate="G$1" pin="GND-ISO"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<wire x1="45.72" y1="22.86" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="-"/>
+<wire x1="45.72" y1="15.24" x2="45.72" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="20.32" x2="60.96" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="15.24" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
+<junction x="45.72" y="15.24"/>
+<pinref part="C1" gate="G$1" pin="-"/>
+<wire x1="30.48" y1="20.32" x2="30.48" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="15.24" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="LED1" gate="G$1" pin="C"/>
+<wire x1="76.2" y1="20.32" x2="76.2" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="15.24" x2="60.96" y2="15.24" width="0.1524" layer="91"/>
+<junction x="60.96" y="15.24"/>
+<pinref part="GND-ISO3" gate="G$1" pin="GND-ISO"/>
+</segment>
+</net>
+<net name="DIODE1" class="0">
+<segment>
+<pinref part="L1" gate="1" pin="B"/>
+<pinref part="D1" gate="G$1" pin="C"/>
+<wire x1="81.28" y1="78.74" x2="91.44" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
